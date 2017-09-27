@@ -1,0 +1,32 @@
+
+
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#data-reactroot {
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#input {
+    width: 340px;
+    height: 500px;
+    background: gray;
+    margin: auto;
+}
+
+#output {
+    width: 340px;
+    height: 500px;
+    background: purple;
+    margin: auto;
+}
+

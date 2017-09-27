@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Markdown viewer made with React",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "marked": "^0.3.6"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
