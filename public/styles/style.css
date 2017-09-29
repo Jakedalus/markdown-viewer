@@ -13,20 +13,27 @@ html, body {
     margin: 0 auto;
 
     display: flex;
-    flex-direction: row;
+}
+
+textarea {
+    height: 500px;
+    resize: none;
+}
+
+.section {
+    padding: 10px;
+    margin: 10px;
+
 }
 
 #input {
-    width: 340px;
-    height: 500px;
-    background: gray;
-    margin: auto;
+    flex: 1;
+    display: inline-block;
 }
 
 #output {
-    width: 340px;
-    height: 500px;
-    background: purple;
-    margin: auto;
+    flex: 2;
+    display: inline-block;
+    
 }
 

@@ -12,6 +12,10 @@ marked.setOptions({
     sanitize: true
 });
 
+var startingText = '\nHeading \n=======\n\nSub-heading\n-----------\n\n### Another deeper heading\n\nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\nNumbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n\nThe rain---not the reign---in\nSpain.\n\n *[Herman Fassett](https://freecodecamp.com/hermanfassett)*\n';
+
+var startingMarkdown = marked(startingText);
+
 var MarkdownApp = function (_React$Component) {
     _inherits(MarkdownApp, _React$Component);
 
@@ -22,9 +26,10 @@ var MarkdownApp = function (_React$Component) {
 
         _this.handleTyping = _this.handleTyping.bind(_this);
         _this.state = {
-            inputText: '',
-            outputText: { __html: '' }
+            inputText: startingText,
+            outputText: { __html: startingMarkdown }
         };
+
         return _this;
     }
 
@@ -52,7 +57,7 @@ var MarkdownApp = function (_React$Component) {
                     null,
                     'Markdown Viewer'
                 ),
-                React.createElement(Input, { handleTyping: this.handleTyping }),
+                React.createElement(Input, { 'default': this.state.inputText, handleTyping: this.handleTyping }),
                 React.createElement(Output, { outputText: this.state.outputText })
             );
         }
@@ -64,13 +69,13 @@ var MarkdownApp = function (_React$Component) {
 var Input = function Input(props) {
     return React.createElement(
         'div',
-        { id: 'input' },
-        React.createElement('textarea', { onInput: props.handleTyping, rows: '10', cols: '50', name: 'inputText' })
+        { className: 'section', id: 'input' },
+        React.createElement('textarea', { defaultValue: props.default, onChange: props.handleTyping, rows: '20', cols: '50', name: 'inputText' })
     );
 };
 
 var Output = function Output(props) {
-    return React.createElement('div', { id: 'output', dangerouslySetInnerHTML: props.outputText });
+    return React.createElement('div', { className: 'section', id: 'output', dangerouslySetInnerHTML: props.outputText });
 };
 
 ReactDOM.render(React.createElement(MarkdownApp, null), document.getElementById('app'));
