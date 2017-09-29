@@ -52,11 +52,6 @@ var MarkdownApp = function (_React$Component) {
             return React.createElement(
                 'div',
                 null,
-                React.createElement(
-                    'h1',
-                    null,
-                    'Markdown Viewer'
-                ),
                 React.createElement(Input, { 'default': this.state.inputText, handleTyping: this.handleTyping }),
                 React.createElement(Output, { outputText: this.state.outputText })
             );

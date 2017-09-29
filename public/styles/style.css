@@ -2,28 +2,32 @@
 
 
 html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    height: 100%;
 }
 
-#data-reactroot {
-    width: 90%;
-    margin: 0 auto;
+body {
+    margin: 0;
+}
+
+#app {
+    width: 100%;
 
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 textarea {
     height: 500px;
     resize: none;
+    border-radius: 5px 5px;
+    padding: 10px;
 }
 
 .section {
     padding: 10px;
     margin: 10px;
-
+    height: 550px;
 }
 
 #input {
@@ -34,6 +38,7 @@ textarea {
 #output {
     flex: 2;
     display: inline-block;
-    
+    border: 2px solid black;
+    border-radius: 5px 5px;
 }
 

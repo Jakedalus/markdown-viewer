@@ -41,7 +41,6 @@ Spain.
 
 var startingMarkdown = marked(startingText);
 
-
 class MarkdownApp extends React.Component {
     
     constructor(props) {
@@ -70,7 +69,6 @@ class MarkdownApp extends React.Component {
     render() {
         return (
             <div>
-                <h1>Markdown Viewer</h1>
                 <Input default={this.state.inputText} handleTyping={this.handleTyping}/>
                 <Output outputText={this.state.outputText} />
             </div>
